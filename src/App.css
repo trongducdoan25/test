@@ -1,38 +1,30 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gif-image {
+  width: 30%; /* Điều chỉnh kích thước GIF */
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.scrolling-text {
+  font-size: 100px;
+  font-weight: bold;
+  color: #ff6347;  /* Màu chữ đỏ */
+  white-space: nowrap;
+  position: fixed;
+  bottom: 2;  /* Đặt chữ chạy ở dưới */
+  width: 200%;
+  text-align: center;
+  animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);  /* Bắt đầu từ bên phải */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(-100%);  /* Kết thúc ở bên trái */
   }
 }
